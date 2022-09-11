@@ -12,10 +12,13 @@ export default {
     '^#app/(.*)$': '<rootDir>/src/$1',
   },
   clearMocks: true,
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.test.json',
-      diagnostics: false,
-    },
+  transform: {
+    '^.+.ts?$': [
+      'ts-jest',
+      {
+        tsconfig: '<rootDir>/tsconfig.test.json',
+        isolatedModules: true,
+      },
+    ],
   },
 };
