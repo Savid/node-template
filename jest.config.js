@@ -13,12 +13,6 @@ export default {
   },
   clearMocks: true,
   transform: {
-    '^.+.ts?$': [
-      'ts-jest',
-      {
-        tsconfig: '<rootDir>/tsconfig.test.json',
-        isolatedModules: true,
-      },
-    ],
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.test.json' }],
   },
 };

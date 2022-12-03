@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.base",
   "compilerOptions": {
+    "esModuleInterop": true,
     "noEmit": true,
     "types": [
       "node",
