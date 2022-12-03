@@ -8,7 +8,7 @@
   "author": "Andrew Davis",
   "scripts": {
     "build": "rimraf dist/* && tsc",
-    "dev:start": "NODE_ENV=development LOG_LEVEL=debug node --conditions=development --experimental-loader @savid/esbuild-register-loader -r esbuild-register -r dotenv/config src/index.ts",
+    "dev:start": "NODE_ENV=development LOG_LEVEL=debug node --conditions=development --loader esbuild-register/loader -r esbuild-register -r dotenv/config src/index.ts",
     "dev": "nodemon --signal SIGHUP --watch src -e ts --exec npm run dev:start",
     "lint": "eslint .",
     "test": "jest --verbose"
@@ -22,7 +22,6 @@
   "devDependencies": {
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
-    "@savid/esbuild-register-loader": "1.0.1",
     "@savid/eslint": "1.2.0",
     "@semantic-release/changelog": "6.0.2",
     "@semantic-release/git": "10.0.1",
